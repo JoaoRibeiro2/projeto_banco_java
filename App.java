@@ -5,27 +5,33 @@ import banco.Conta;
 public class App{
 
     public static void main(String[] args){
-        Conta p0 = new Conta("João Vitor", 1000);
-        Conta p1 = new Conta("Miguel", 1000);
-        Conta p2 = new Conta("Jorel", 1000);
-
-        p0.Deposito(500, 500);
-        p1.Deposito(300, 1000);
-        p2.Saque(500, 2000);
-        p2.Deposito(300, 2000);
-        p0.Saque(1500, 500);
-        p0.Deposito(300, 500);
-        p0.Saque(500, 500);
-        p0.Deposito(300, 500);
-        p0.Saque(500, 500);
-        p2.Deposito(1300, 2000);
-        p1.Saque(250, 1000);
-        p0.Saque(500, 500);
-        p1.Deposito(1300, 1000);
-        p2.Saque(250, 2000);
-        p0.Deposito(1300, 500);
-        p0.Saque(250, 500);
         
+        Conta Miguel = new Conta("Miguel",1000);
+        Conta Jonas = new Conta("Jonas", 1000);
+        Conta Jorel = new Conta("Jorel", 1000);
+        System.out.println(Miguel.getNome());
+        System.out.println(Miguel.getSaldo());
+        Miguel.ExibirSaldo();
+
+        Miguel.DepositarValor(500);
+        Jonas.DepositarValor(300);
+        Jorel.RetirarValor(500);
+        Jorel.DepositarValor(300);
+        Miguel.RetirarValor(1500);
+        Miguel.DepositarValor(300);
+        Miguel.RetirarValor(500);
+        Miguel.DepositarValor(300);
+        Miguel.RetirarValor(500);
+        Jorel.DepositarValor(1300);
+        Jonas.RetirarValor(250);
+        Miguel.RetirarValor(500);
+        Jonas.DepositarValor(1300);
+        Jonas.RetirarValor(250);
+        Miguel.RetirarValor(500);
+        Jorel.DepositarValor(1300);
+        Jorel.RetirarValor(250);
+        Miguel.DepositarValor(1300);
+        Miguel.RetirarValor(250);
     }
     
 }
